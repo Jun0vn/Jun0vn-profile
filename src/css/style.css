@@ -1,0 +1,271 @@
+
+:root {
+  --terminal-font-color: #b0b2b6;
+  --terminal-output-color: #f6f6f6;
+}
+body {
+  margin: 0;
+  height: 100%;
+  font-family: sans-serif;
+  color: #333d54;
+  background-color: #f6f6f6;
+}
+
+footer,
+.hero-body {
+  background-color: transparent !important;
+}
+
+a:hover {
+  color:#6fa8e7;
+  filter: drop-shadow(0 0 5px whitesmoke);
+}
+a:link {
+  text-decoration:none;
+  transition:.1s ease-in;
+}
+#canvas {
+  position: absolute;
+  height: 110vh;
+  top: -10vh;
+  right: 0;
+  left: 0;
+}
+
+.hero {
+  min-height: 100vh;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  color: rgba(139, 180, 216, 0.94);
+}
+
+.terminal {
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: "Monaco", Consolas, Lucida Console, monospace;
+}
+
+.terminal-bar {
+  background-color: #eae8e9;
+  display: flex;
+  position: relative;
+}
+
+.dark-mode {
+  background: #0d0f17;
+  height: 42px;
+  align-items: center;
+}
+
+.dark-mode-text {
+  color: #bdb9bf !important;
+}
+
+.icon-btn {
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+}
+
+.terminal-bar > div.icon-btn:first-child {
+  margin-left: 16px;
+}
+
+.terminal-bar > div.icon-btn:not(:first-child) {
+  margin-left: 8px;
+}
+
+.terminal-bar > div.icon-btn:last-child {
+  margin-right: 0.6rem;
+}
+
+.close {
+  background-color: #f96256;
+  border: 1px solid #f65549;
+}
+
+.max {
+  background-color: #33c948;
+  border: 1px solid #2dbb41;
+}
+
+.min {
+  background-color: #fdbc3d;
+  border: 1px solid #ffb524;
+}
+
+.terminal-window {
+  min-height: 254px;
+  max-height: 60vh;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.primary-bg {
+  background-color: #0d0f17;
+}
+
+.shadow {
+  box-shadow: 0 50px 100px rgba(50, 50, 93, 0.15), 0 15px 35px rgba(50, 50, 93, 0.2), 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.terminal-bar-text {
+  position: absolute;
+  color: var(--terminal-font-color);
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.has-equal-height {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-output {
+  overflow-y: hidden;
+  overflow: auto;
+}
+
+.column-child {
+  flex: 1;
+}
+
+.terminal-line {
+  position: relative;
+  color: var(--terminal-font-color);
+}
+
+.output {
+  margin-bottom: 1rem;
+  color: var(--terminal-output-color);
+}
+
+.directory {
+  color: #75e1e7;
+  font-weight: 500;
+}
+
+.success {
+  color: #8dd39e;
+}
+
+.code,
+.error,
+.social,
+.fa-heart {
+  color: #4069f9;
+}
+
+.fa-heart {
+  padding-top: 0.5rem;
+}
+
+.dummy-keyboard {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.user-input {
+  position: relative;
+}
+
+.user-input::after {
+  display: block;
+  content: "";
+  width: 10px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 0;
+  right: -10px;
+  animation: blink 1s step-start 0s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.footer {
+  font-family: "Monaco", Consolas, Lucida Console, monospace;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .resume {
+    padding-bottom: 0.5rem;
+  }
+}
+
+/* INTRO ANIMATION */
+.columns {
+  animation: scale-in-ver-center 0.815s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes scale-in-ver-center {
+  0% {
+    transform-origin: top center;
+    transform: scaleY(0);
+    opacity: 1;
+  }
+  100% {
+    transform-origin: top center;
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+#overlay{
+    position: fixed;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    background: rgba(1,1,1,.7);
+    z-index: 9999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 4px;
+}
+.overlay-text{
+    color: white;
+    font-weight: bold;
+    font-size: 34px;
+}
+#overlay .overlay-text:nth-child(1){
+    animation: loading 1.4s linear infinite backwards;
+}
+#overlay .overlay-text:nth-child(2){
+    animation: loading 1.4s .1s linear infinite backwards;
+}
+#overlay .overlay-text:nth-child(3){
+    animation: loading 1.4s .2s linear infinite backwards;
+}
+#overlay .overlay-text:nth-child(4){
+    animation: loading 1.4s .3s linear infinite backwards;
+}
+#overlay .overlay-text:nth-child(5){
+    animation: loading 1.4s .4s linear infinite backwards;
+}
+#overlay .overlay-text:nth-child(6){
+    animation: loading 1.4s .5s linear infinite backwards;
+}
+#overlay .overlay-text:nth-child(7){
+    animation: loading 1.4s .6s linear infinite backwards;
+}
+@keyframes loading {
+    0%{opacity: 0;}
+    40%{opacity: 1}
+    100%{opacity: 0}
+}
