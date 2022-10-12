@@ -3,7 +3,7 @@ const COMMANDS = {
   about:
     "Hello 👋<br>I'm Khanh Hung, also known as Juno, Jun0vn, KhanhHung or khanhhung08. I study for my future, working for money and play for passion.'I will drown you with my own strength'.",
   skills: '<span class="code">Programming Languages:</span> HTML, CSS, Java, JavaScript.<br><span class="code">Program:</span> Visual Studio Code, IntelliJ IDEA, Adobe Premiere Pro, Adobe After Effect Pro, Adobe Photoshop.',
-  education: "A1K59-Mai Dinh Secondary School.",
+  education: "A1K49-Mai Dinh Secondary School.",
   store: '<span style="color: white">Netflix Premium:</span> 2$/month.<br><span style="color: white">Youtube Premium: </span><span>8$/6month</span>'
 };
 let userInput, terminalOutput;
