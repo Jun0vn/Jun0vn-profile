@@ -3,18 +3,6 @@ var projectfind = false;
 
 const select = document.querySelector.bind(document);
 
-document.onkeydown = function(e) {
-  if (e.ctrlKey && 
-      (e.keyCode === 67 || 
-       e.keyCode === 86 || 
-       e.keyCode === 85 || 
-       e.keyCode === 117)) {
-        window.location.replace("https://github.com/Jun0vn");
-      return false;
-  } else {
-      return true;
-  }
-
 const LOADING = {
     overlayElement: select('#overlay'),
     
